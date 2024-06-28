@@ -38,7 +38,7 @@ const botaoDescer = document.querySelector('#botaoDescer')
 const botaoSubir = document.querySelector('#botaoSubir')
 
 botaoDescer.addEventListener('click', () => {
-    window.scroll({ top: window.innerHeight, behavior: "smooth" })
+    window.scroll({ top: "100vh", behavior: "smooth" })
 })
 
 botaoSubir.addEventListener('click', () => {
