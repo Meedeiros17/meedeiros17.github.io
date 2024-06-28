@@ -38,14 +38,14 @@ const botaoDescer = document.querySelector('#botaoDescer')
 const botaoSubir = document.querySelector('#botaoSubir')
 
 botaoDescer.addEventListener('click', () => {
-    window.scroll({ top: "100vh", behavior: "smooth" })
+    window.scroll({ top: window.innerHeight, behavior: "smooth" })
 })
 
 botaoSubir.addEventListener('click', () => {
     window.scroll({ top: 0, behavior: "smooth" })
 })
 
-// Código feito pelo Chat GPT que possui a finalidade de que quando a página for carregada \ela volta ao topo suavemente.
+// Código feito pelo Chat GPT que possui a finalidade de que quando a página for carregada ela volta ao topo suavemente.
 
 window.onload = function () {
     window.scrollTo({ top: 0, behavior: 'smooth' });
