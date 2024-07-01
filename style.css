@@ -504,7 +504,9 @@ a {
             height: 0;
         }
 
-        100% {}
+        100% {
+            height: auto;
+        }
     }
 
     .escondeMenuHeader {
@@ -512,7 +514,9 @@ a {
     }
 
     @keyframes escondeMenuHeaderMob {
-        0% {}
+        0% {
+            height: auto;
+        }
 
         100% {
             height: 0;
