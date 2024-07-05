@@ -1,0 +1,48 @@
+* {
+  font-size: 1.3rem;
+}
+
+div {
+  display: grid;
+  grid-template: repeat(5, min-content) / 3fr 2fr;
+  gap: 8px;
+  padding: 25px;
+  border: 1px solid #777;
+  box-shadow: 1px 1px 10px rgba(170, 170, 170, 0.8);
+  border-radius: 5px;
+  background: #e5e5e5;
+  margin: auto;
+}
+
+div label {
+  grid-column: 1 / 2;
+  text-align: right;
+  padding: 8px 0;
+}
+
+body {
+  background-color: #1f1f1f;
+  padding: 70px 100px;
+}
+
+div input {
+  grid-column: 2 / 3;
+  padding: 8px;
+}
+
+h1,
+button {
+  grid-column: 1 / 3;
+  padding: 8px;
+}
+
+@media (max-width: 550px) {
+  body {
+    padding: 5px;
+    width: 93vw;
+  }
+
+  *{
+    font-size: 0.8rem;
+  }
+}

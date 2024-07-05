@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário com Validação em JS</title>
+  <link rel="stylesheet" href="style_formCurriculo.css">
+  <script src="js_formCurriculo.js" defer></script>
+  <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/65/65032.png" type="image/png">
+</head>
+
+<body>
+  <form id="form" action='javascript:alert("Enviado")'>
+
+    <!--  Finalizado -->
+    <h1 id="title">Formulário de Currículo Online</h1>
+    <h2>Preencha os campos abaixo com suas informações pessoais e profissionais, e garanta que seu currículo esteja
+      completo e validado.</h2>
+
+    <h3 id="topo">Informações Pessoais</h3>
+    <label for="nome">Nome</label> <!-- Nome Completo -->
+    <input type="text" name="nome" id="nome" pattern="[A-Za-z]{5,100}">
+
+
+    <label for="cpf">CPF</label> <!-- CPF -->
+    <input type="text" name="cpf" id="cpf" placeholder="123.456.789-01">
+
+
+    <label for="nasc">Data de Nascimento</label> <!-- Data de nascimento -->
+    <input type="date" name="nasc" id="nasc">
+
+    <label for="idade">Idade</label>
+    <input type="text" name="idade" id="idade" disabled>
+
+
+    <label for="nacionalidade">Nacionalidade</label>
+    <select name="nacionalidade" id="nacionalidade">
+      <option value="brasileiro" selected>Brasileiro</option>
+      <option value="outro">Outro</option>
+    </select>
+
+
+    <label for="estadoCivil">Estado Civíl</label>
+    <select name="estadoCivil" id="estadoCivil">
+      <option value="solteiro" selected>Solteiro</option>
+      <option value="casado">Casado</option>
+      <option value="separado">Separado</option>
+      <option value="divorciado">Divorciado</option>
+      <option value="viuvo">Viúvo</option>
+    </select>
+
+    <label for="endereco">Endereço</label>
+    <input type="text" name="endereco" id="endereco">
+
+    <label for="foto">Foto</label>
+    <input type="file" name="foto" id="foto">
+
+    <h3>Informações de Contato</h3>
+    <label for="telc">Número de Telefone Celular</label>
+    <input type="tel" name="telc" id="telc" placeholder="(00) 12345-6789">
+
+    <label for="telf">Número de Telefone Residencial/Fixo</label>
+    <input type="tel" name="telf" id="telf" placeholder="(00) 1234-5678">
+
+    <label for="email">Email</label>
+    <input type="email" name="email" id="email" placeholder="example@gmail.com">
+
+    <label for="email2">Confirmação Email</label>
+    <input type="email" name="email2" id="email2" placeholder="example@gmail.com">
+
+    <label for="pwd">Senha</label>
+    <input type="password" name="pwd" id="pwd" pattern="(?=(.*[0-9]))((?=.*[A-Za-z0-9])(?=.*[A-Z])(?=.*[a-z]))^.{8,}$">
+
+    <label for="pwd2">Confirmar senha</label>
+    <input type="password" name="pwd2" id="pwd2">
+
+    <h3>Experiência</h3>
+
+    <label for="expTrab">Experiência de Trabalho</label>
+    <select name="expTrab" id="expTrab">
+      <option value="menos6Meses">Menos de 6 meses</option>
+      <option value="6meses-2anos">6 meses a 2 anos</option>
+      <option value="2anos-10anos">2 anos a 10 anos</option>
+      <option value="maisDe10anos">Mais de 10 anos</option>
+    </select>
+
+    <label for="nivEsco">Nível de Escolaridade</label>
+    <select name="nivEsco" id="nivEsco">
+      <option value="fundInc">Ensino Fundamental - Incompleto</option>
+      <option value="fundCom">Ensino Fundamental - Completo</option>
+      <option value="medInc">Ensino Médio - Incompleto</option>
+      <option value="medCom">Ensino Médio - Completo</option>
+      <option value="supInc">Ensino Superior - Incompleto</option>
+      <option value="supCom">Ensino Superior - Completo</option>
+    </select>
+
+    <label for="formAcad">Formação Acadêmica</label>
+    <input type="text" name="formAcad" id="formAcad">
+
+    <label for="cursComp">Cursos Completares</label>
+    <input type="text" name="cursComp" id="cursComp">
+
+    <div>
+      <label>Cursos Complementares:</label>
+      <div class="tag-container" id="tagContainer">
+        <input type="text" name="course1" class="tag-input" placeholder="Digite o nome do curso">
+        <input type="text" name="course2" class="tag-input" placeholder="Digite o nome do curso">
+        <input type="text" name="course3" class="tag-input" placeholder="Digite o nome do curso">
+      </div>
+    </div>
+
+    <label for="lic">
+      Aceito <br> os <br>Termos <br>de <br>Uso e a<br> Política<br> de Privacidade<br>
+    </label>
+    <input type="checkbox" name="lic" id="lic">
+
+    <input type="submit" value="ENVIAR" id="confirmButton">
+  </form>
+  <footer>
+    <p id="aut">Feito por: Gabriel Medeiros, Matheus Tonolli e Henrique Días<br> Turma: 3º Info 2</p>
+  </footer>
+</body>
+
+</html>

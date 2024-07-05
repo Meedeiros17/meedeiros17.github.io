@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora</title>
+  <link rel="stylesheet" href="styleCalculadora.css">
+  <script src="scriptCalculadora.js" defer></script>
+  <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+</head>
+
+<body>
+  <div id="CalculadoraCelsiusparaReaumur">
+    <h1>Calculadora Celsius para Réaumur</h1>
+    <label for="entrada-tempc">Temperatura em °C</label>
+    <input type="number" id="entrada-tempc" name="entrada-tempc">
+
+    <label for="result-tempr">Temperatura em °Ré</label>
+    <input type="text" id="result-tempr" name="result-tempr" disabled>
+    <button type="button" id="calcula-tempr"> Calcular </button>
+  </div>
+
+  <br> <br>
+
+  <div id="CalculadoradeEquacaodo2grau">
+    <h1>Calculadora de raízes reais</h1>
+    <label for="entrada-a">Valor de A</label>
+    <input type="number" id="entrada-a" name="entrada-a">
+
+    <label for="entrada-b">Valor de B</label>
+    <input type="number" id="entrada-b" name="entrada-b">
+
+    <label for="entrada-c">Valor de C</label>
+    <input type="number" id="entrada-c" name="entrada-c">
+
+    <label for="result-x1">Resultado do x1</label>
+    <input type="text" id="result-x1" name="result-x1" disabled>
+
+    <label for="result-x2">Resultado do x2</label>
+    <input type="text" id="result-x2" name="result-x2" disabled>
+
+    <label for="result-delta">Resultado do Delta</label>
+    <input type="text" id="result-delta" name="result-delta" disabled>
+
+    <button type="button" id="calcula-raiz"> Calcular </button>
+  </div>
+
+  <br> <br>
+
+  <div id="ConversorWattparaCV">
+    <h1>Conversor de Watts para CV</h1>
+    <label for="entrada-watt1">Watt</label>
+    <input type="number" id="entrada-watt1" name="entrada-watt1">
+
+    <label for="result-cv">Cavalo-Vapor</label>
+    <input type="text" id="result-cv" name="result-cv" disabled>
+    <button type="button" id="calcula-cv"> Calcular </button>
+  </div>
+
+  <br> <br>
+
+  <div id="ConversorWattparaHP">
+    <h1>Conversor de Watts para HP</h1>
+    <label for="entrada-watt2">Watt</label>
+    <input type="number" id="entrada-watt2" name="entrada-watt2">
+
+    <label for="result-hp">Horse-Power</label>
+    <input type="text" id="result-hp" name="result-hp" disabled>
+    <button type="button" id="calcula-hp"> Calcular </button>
+  </div>
+
+  <br> <br>
+
+  <div id="ConversorWattparaBTU">
+    <h1>Conversor de Watts para BTU/hr</h1>
+    <label for="entrada-watt3">Watt</label>
+    <input type="number" id="entrada-watt3" name="entrada-watt3">
+
+    <label for="result-btu">BTU/hr</label>
+    <input type="text" id="result-btu" name="result-btu" disabled>
+    <button type="button" id="calcula-btu"> Calcular </button>
+  </div>
+</body>

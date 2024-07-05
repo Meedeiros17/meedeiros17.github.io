@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animação JQuery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="shortcut icon" href="jquery.png" type="image/x-icon">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            background-color: #1f1f1f;
+            padding: 50px;
+        }
+
+        .D1 {
+            width: 50vw;
+            height: 5px;
+            position: absolute;
+            top: 210px;
+            left: 50%;
+            margin-left: -25vw;
+            background-color: lightblue;
+            border-radius: 2px;
+            border: 2px dotted wheat;
+        }
+
+        button {
+            margin: 10px auto;
+            width: 120px;
+            height: 30px;
+            transition: all linear 800ms;
+        }
+
+        button:hover {
+            transition: all linear 250ms;
+            transform: translateY(-3px);
+            scale: 1.06;
+            cursor: pointer;
+        }
+
+        @media (max-width: 500px) {
+            body {
+                width: 100vw;
+                padding: 0;
+                padding-top: 50px;
+            }
+
+            .D1 {
+                width: 50vw;
+                height: 60vh;
+                position: absolute;
+                top: 150px;
+                left: 50%;
+                margin-left: -25vw;
+                margin-top: 50px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <button onclick="Esconder();"> ESCONDER </button>
+    <button onclick="Mostrar();"> MOSTRAR </button>
+    <div class="D1" id="D1"></div>
+
+
+    <script>
+        function Esconder() {
+            $("#D1").animate({
+                width: "50vw",
+                height: "5px",
+            }, 2000)
+        }
+
+        function Mostrar() {
+            $("#D1").animate({
+                width: "50vw",
+                height: "60vh",
+            }, 2000)
+        }
+    </script>
+
+</body>
+
+</html>

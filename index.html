@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio - Gabriel Medeiros</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <script src="https://kit.fontawesome.com/ede55d3ae8.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="img/hero-64.png" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <img id="heroi" src="img/hero-64.png" alt="Herói">
+        <h1 class="headerh1">Portfólio de Gabriel Medeiros</h1>
+        <i class="fa-solid fa-bars" id="barra" onclick="exibirMenuHeader()" style=" cursor: pointer;"></i>
+
+    </header>
+    <aside id="menuHeader" class="menuHeader" style="display: none;">
+        <i class="fa-solid fa-xmark x" onclick="escondeMenuHeader()" style="display: block; color: white"></i>
+        <div class="contato">
+            <h2>Informações de Contato</h2>
+            <ul>
+                <li><b>Nome:</b> Gabriel Medeiros</li>
+                <li><b>Telefone:</b> (47) 99923-1583</li>
+                <li><a href="https://wa.me/47999231583/?text=Olá%20Gabriel!" target="_blank">Clique aqui para me enviar
+                        uma mensagem pelo Whatsapp</a></li>
+                <li><b>E-mail:</b> info.gabriel2022.01@gmail.com</li>
+                <li><a href="https://mailto:info.gabriel2022.01@gmail.com" target="_blank">Clique aqui para me enviar
+                        uma
+                        mensagem por e-mail</a></li>
+                <li><a href="https://github.com/Meedeiros17/meedeiros17.github.io" target="_blank">Meu repositório
+                        no GitHub</a></li>
+                <li><a onclick="botaoReferencias()" id="botaoReferencias">Clique aqui para ver as referências deste
+                        projeto</a>
+            </ul>
+        </div>
+    </aside>
+
+    <main>
+        <section class="emTela">
+            <div class="texto">
+                <h2>Bem-vindo ao meu portfólio!</h2><br>
+                <p> Olá! Meu nome é Gabriel Medeiros. Tenho 17 anos e atualmente sou estudante do 3º ano de TI integrado
+                    ao NEM. Adoro tecnologia e gosto de criar soluções eficientes e criativas para desafios e tarefas
+                    desafiadoras relacionadas à tecnologia.</p><br>
+
+                <p> Neste site você encontrará alguns dos projetos que desenvolvi nos últimos meses. Sinta-se à vontade
+                    para conhecer meu portfólio, se tiver algo sobre o qual queira conversar, pode entrar em contato
+                    comigo utilizando o menu no cabeçalho!</p><br>
+
+                <p> Obrigado pela visita!</p><br>
+
+                <p> - Gabriel Medeiros</p>
+
+
+            </div>
+        </section>
+
+        <div class="referencias" style="display: none;">
+            <i class="fa-solid fa-xmark x" onclick="escondeMenuHeader()"></i>
+            <h2>Referências</h2>
+            <ul>
+                <li><a href="https://chatgpt.com" target="_blank">Chat GPT</a></li>
+                <li><a href="https://google.com" target="_blank">Google</a></li>
+                <li><a href="https://github.com" target="_blank">GitHub</a></li>
+                <li><a href="https://nike.com" target="_blank">Nike</a></li>
+                <li><a href="https://cssgradient.io" target="_blank">CSS Gradient</a></li>
+                <li><a href="https://getcssscan.com/css-buttons-examples" target="_blank">CSS Scan - CSS
+                        Buttons Examples</a></li>
+                <li><a href="https://pages.github.com" target="_blank">GitHub Pages</a></li>
+                <li><a href="https://fontawesome.com/icons" target="_blank">Font Awesome</a></li>
+                <li><a href="https://fonts.google.com" target="_blank">Google Fonts</a></li>
+                <li><a href="https://validator.w3.org" target="_blank">W3C Validator</a></li>
+                <li><a href="https://www.w3schools.com" target="_blank">W3Schools</a></li>
+                <li><a href="https://developer.mozilla.org/pt-BR" target="_blank">MDN Web Docs</a></li>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Border-radius_generator"
+                        target="_blank">MDN Web Docs - Border Radius Generator</a></li>
+                <li><a href="https://br.pinterest.com/pin/798122365219272829" target="_blank">Tênis - Pinterest</a>
+                </li>
+                <li><a href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_images_hackman"
+                        target="_blank">Tryit: HTML Image - Animated GIF</a></li>
+                <li><a href="https://gifrecorder.com/download.htm" target="_blank">Gif Recorder</a></li>
+                <li><a href="https://www.netflix.com" target="_blank">Netflix</a></li>
+                <li><a href="https://codepen.io/GhostRider/pen/oNvoNv" target="_blank">CSS Scroll Bars</a></li>
+                <li><a href="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.min.js" target="_blank">Eclipse Public License - MQTT</a></li>
+            </ul>
+        </div>
+
+        <section id="projetos" class="emTela">
+            <br>
+            <h2 style="font-size: 2.2rem;">Venha conhecer meus projetos:</h2>
+            <br><br><br><br>
+            <a href="Nike/indexNike.html" target="_blank">
+                <div class="titSection">
+                    <h2>Projeto Pessoal - Inspiração: Nike</h2>
+                    <i class="fa-solid fa-link" style="scale: 1.45;"></i>
+                </div>
+                <img src="nike.gif" class="gif pc" alt="Nike - Gif">
+                <img src="nikeMob.gif" class="gif mobile" alt="Nike - Gif">
+            </a>
+
+            <a href="Netflix/indexLogin.html" target="_blank">
+                <div class="titSection">
+                    <h2>Projeto Pessoal - Inspiração: Netflix</h2>
+                    <i class="fa-solid fa-link" style="scale: 1.45;"></i>
+                </div>
+                <img src="netflix.gif" class="gif pc" alt="Netflix - Gif">
+                <img src="netflixMob.gif" class="gif mobile" alt="Netflix - Gif">
+            </a>
+
+            <a href="Formulário_JS/index_formCurriculo.html" target="_blank">
+                <div class="titSection">
+                    <h2>Formulário c/ JavaScript</h2>
+                    <i class="fa-solid fa-link" style="scale: 1.45;"></i>
+                </div>
+                <img src="formJS.gif" class="gif pc" alt="Formulário JS">
+                <img src="formJSMob.gif" class="gif mobile" alt="Formulário JS">
+            </a>
+
+            <a href="Animacao_JQuery/animacaoJQuery.html" target="_blank">
+                <div class="titSection">
+                    <h2>Animação c/ JQuery</h2>
+                    <i class="fa-solid fa-link" style="scale: 1.45;"></i>
+                </div>
+                <img src="anima.gif" class="gif pc" alt="Animação">
+                <img src="animaMob.gif" class="gif mobile" alt="Animação">
+            </a>
+
+            <a href="Calculadora/indexCalculadora.html" target="_blank">
+                <div class="titSection">
+                    <h2>Calculadora</h2>
+                    <i class="fa-solid fa-link" style="scale: 1.45;"></i>
+                </div>
+                <img src="calculadora.gif" class="gif pc" alt="Calculadora">
+                <img src="calculadoraMob.gif" class="gif mobile" alt="Calculadora">
+            </a>
+
+            <a href="Comunicacao_Assincrona/indexComAssincrona.html" target="_blank">
+                <div class="titSection">
+                    <h2>Comunicação Assíncrona (Erro de Privacidade/CORS)</h2>
+                    <i class="fa-solid fa-link" style="scale: 1.45;"></i>
+                </div>
+            </a>
+
+            <a href="MQTT/indexMQTT.html" target="_blank">
+                <div class="titSection">
+                    <h2>MQTT</h2>
+                    <i class="fa-solid fa-link" style="scale: 1.45;"></i>
+                </div>
+            </a>
+        </section>
+    </main>
+</body>
+
+</html>

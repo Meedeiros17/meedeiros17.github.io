@@ -1,0 +1,956 @@
+@font-face {
+    font-family: myFont;
+    src: url(img/Varta-Bold.ttf);
+}
+
+* {
+    padding: 0;
+    border: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: myFont;
+    list-style-type: none;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+textarea:focus,
+input:focus,
+select:focus {
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+}
+
+body {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+
+/* 
+
+
+
+    CABEÇALHO
+
+
+
+ */
+
+
+header {
+    width: 100%;
+    height: 96px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    border-top: 36px solid var(--cinzaClaro);
+}
+
+.logotipoNike {
+    position: absolute;
+    width: 76px;
+    height: auto;
+    left: 40px;
+    top: -8px;
+}
+
+.divLogotipoNike {
+    position: relative;
+    height: 100%;
+    width: 250px;
+}
+
+.utilidadesCabecalho {
+    position: relative;
+    height: 100%;
+    width: 350px;
+}
+
+:root {
+    --cinzaClaro: #f5f5f5;
+    --cinzaEscuro: #cacacb;
+}
+
+.dropdown {
+    display: flex;
+    flex-direction: row;
+    margin: 0px 14px;
+    font-size: 18px;
+    position: relative;
+}
+
+#dropdown {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 55px;
+    width: 700px;
+    left: 50%;
+    margin-left: -250px;
+}
+
+#imgBody {
+    width: 100%;
+    height: calc(100vh - 96px);
+    object-fit: cover;
+}
+
+.utilidadesCabecalho {
+    display: grid;
+    position: absolute;
+    right: 0;
+}
+
+.pesquisaFundo {
+    background-color: var(--cinzaClaro);
+    border-radius: 24px;
+    position: absolute;
+    top: 11.8px;
+    right: 140px;
+    width: 170px;
+    height: 36px;
+    padding-left: 6.5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    z-index: 10010;
+}
+
+.pesquisaFundo:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+input {
+    background: none;
+    height: 35px;
+    width: 90px;
+    margin-left: 10px;
+    font-size: 16.6px;
+    cursor: text;
+    padding-top: 4px;
+}
+
+#favorito {
+    position: absolute;
+    right: 88px;
+    top: 12px;
+    width: 36.5px;
+    height: auto;
+    padding: 6px;
+    border-radius: 30px;
+}
+
+#favorito:hover {
+    background-color: var(--cinzaEscuro);
+}
+
+#carrinho {
+    position: absolute;
+    right: 48px;
+    top: 12px;
+    width: 36.5px;
+    height: auto;
+    padding: 6px;
+    border-radius: 30px;
+}
+
+#carrinho:hover {
+    background-color: var(--cinzaEscuro);
+}
+
+/* Código antigo (partes) */
+
+.dropdown-menu {
+    display: none;
+    position: fixed;
+    background-color: white;
+    padding: 50px 250px;
+    top: 90px;
+    left: 0px;
+    width: 100%;
+    opacity: 0;
+    z-index: 1000;
+    box-shadow: 0 10px 6px rgba(0, 0, 0, 0.2);
+    animation: animaDropdown 1900ms;
+}
+
+.section {
+    display: flex;
+    flex-direction: row;
+    align-items: self-start;
+    justify-content: space-around;
+    width: 100%;
+    margin-left: -40px;
+}
+
+.dropdown-menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 20px;
+}
+
+.dropdown-menu li {
+    margin-bottom: 10px;
+}
+
+.dropdown-menu a:not(.item) {
+    color: black;
+    text-decoration: none;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    letter-spacing: -0.4px;
+    z-index: 2000;
+}
+
+a:hover:not(#favorito, #carrinho, a.item, .itemBarraDePesquisa, #header2 div ul li a) {
+    border-bottom: 2px solid black;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline-block;
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    margin: 0 13px;
+    padding-bottom: 0;
+}
+
+.show {
+    display: block !important;
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+.navBodyyyy {
+    transition: all ease-in-out 0.7s;
+    box-shadow: inset 0px 0px 20px black;
+}
+
+.navBody {
+    transition: all ease-in-out 0.3s;
+    filter: brightness(85%) blur(3px) grayscale(20%);
+}
+
+.item {
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.item:hover {
+    color: black;
+}
+
+.primeiro {
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+}
+
+.primeiro:hover {
+    color: rgba(0, 0, 0, 0.3);
+}
+
+@keyframes animaDropdown {
+    from {
+        height: 1px;
+    }
+
+    to {
+        height: auto;
+    }
+}
+
+
+div.secaoDropdown li {
+    margin-bottom: 1px;
+}
+
+.sectionInterior {
+    margin-right: -12px;
+}
+
+.sectionInterior .secaoDropdown:not(.secaoDropdown:first-child) {
+    margin-top: 18px;
+}
+
+
+.dropdown-menu {
+    display: none;
+    position: fixed;
+    background-color: white;
+    padding: 45px 250px 60px 250px;
+    top: 85px;
+    left: 0px;
+    width: 100%;
+    opacity: 0;
+    z-index: 10000;
+    box-shadow: 0 10px 7px -6px rgba(0, 0, 0, 0.2);
+    animation: fadeInDropdown 300ms forwards;
+}
+
+@keyframes fadeInDropdown {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.dropdown-menu li {
+    margin-bottom: 10px;
+    opacity: 0;
+    animation: fadeInText 400ms forwards;
+}
+
+.dropdown-menu li {
+    animation-delay: calc(0.2s * (n - 1));
+}
+
+
+@keyframes fadeInText {
+    0% {
+        opacity: 0;
+        transform: translateY(0px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(10px);
+    }
+}
+
+#barraDePesquisa {
+    position: fixed;
+    width: 100%;
+    height: 337px;
+    top: 0;
+    right: 0px;
+    background-color: white;
+    animation: animaBarraDePesquisa 1s;
+    z-index: 10011;
+    padding: 40px;
+}
+
+#x {
+    position: absolute;
+    top: 19px;
+    right: 48px;
+}
+
+#x:hover {
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+@keyframes animaBarraDePesquisa {
+    0% {
+        right: 190px;
+        width: 0;
+        top: 40px;
+    }
+
+    30% {
+        right: 0;
+        width: 100%;
+    }
+
+    50% {
+        top: 40px;
+    }
+
+    100% {
+        top: 0;
+    }
+}
+
+#nikeIcon2 {
+    position: relative;
+    top: -66px;
+    left: -13px;
+    width: 105px;
+    height: auto;
+}
+
+button {
+    background: none;
+    color: rgba(0, 0, 0, 0.8);
+    letter-spacing: -1px;
+    font-size: 18px;
+}
+
+#inputBarraDePesquisa {
+    background-color: var(--cinzaClaro);
+    width: 59%;
+    position: absolute;
+    left: 49.5%;
+    top: 13px;
+    margin-left: -29.5%;
+    border-radius: 40px;
+    height: 36px;
+    padding-left: 39px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+#inputBarraDePesquisa:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+#lupaBarraDePesquisa {
+    position: absolute;
+    top: 12px;
+    left: 20%;
+    z-index: 9000;
+    width: 36.5px;
+    height: auto;
+    padding: 6px;
+    border-radius: 30px;
+    background-color: var(--cinzaClaro);
+}
+
+#lupaBarraDePesquisa:hover {
+    background-color: var(--cinzaEscuro);
+}
+
+#itensBarraDePesquisa {
+    position: absolute;
+    left: 19.8%;
+    top: 70px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    height: 66%;
+    width: auto;
+    animation: fadeInText 400ms forwards;
+}
+
+.itemBarraDePesquisa:hover {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+
+#itensBarraDePesquisa:not(:first-child) {
+    font-size: 26px;
+    font-weight: 100;
+}
+
+#temasPopulares {
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 16px;
+}
+
+#pesquisarBarraDePesquisa {
+    color: rgba(0, 0, 0, 0.5);
+    padding-top: 3px;
+    padding-left: 2px;
+}
+
+#pesquisarBarraDePesquisa:hover {
+    cursor: text;
+}
+
+#lupaItemPesquisa {
+    width: 36.5px;
+    height: auto;
+    padding: 6px;
+    border-radius: 30px;
+    margin-left: -7px;
+    background-color: var(--cinzaClaro);
+}
+
+#lupaItemPesquisa:hover {
+    background-color: var(--cinzaEscuro);
+    cursor: pointer;
+}
+
+
+/* 
+
+
+
+    CORPO
+
+
+
+ */
+
+#imgNike {
+    width: 100%;
+    max-height: calc(100vh - 96px);
+    object-fit: cover;
+    object-position: top;
+}
+
+@keyframes pulsar1 {
+    0% {
+        top: 25%;
+    }
+
+    100% {
+        top: 26%;
+    }
+}
+
+#botaoDescer {
+    width: 15px;
+    scale: 4;
+    position: absolute;
+    left: 6%;
+    transition: all ease-in-out 100ms;
+    z-index: 9999;
+    cursor: pointer;
+    top: 25%;
+    opacity: 0.9;
+    cursor: pointer;
+    animation: pulsar1 1s alternate infinite;
+}
+
+#botaoSubir {
+    width: 25px;
+    height: 20px;
+    scale: 3.9;
+    position: absolute;
+    transition: all ease-in-out 100ms;
+    z-index: 9999;
+    cursor: pointer;
+    transform: rotate(180deg);
+    display: block;
+    color: white;
+    top: 0px;
+    right: 5%;
+    height: 40px;
+    cursor: pointer;
+    opacity: 0.9;
+}
+
+#botaoSubir:hover {
+    scale: 3.7;
+}
+
+#botaoDescer:hover {
+    scale: 3.8;
+}
+
+i {
+    height: 20px;
+    width: 20px;
+    z-index: 6000;
+}
+
+@font-face {
+    font-family: 'myFont10';
+    src: url('img/SF Collegiate Solid Bold.ttf');
+}
+
+.tenis {
+    background: rgb(14, 154, 255);
+    background: radial-gradient(circle, rgba(14, 154, 255, 1) 0%, rgba(0, 73, 126, 1) 82%);
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 100vh;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    transition: background-color 0.5s ease-in-out;
+}
+
+.tenisEscurece {
+    animation: tenisEscurece 1.2s;
+}
+
+@keyframes tenisEscurece {
+    0% {
+        filter: brightness(100%);
+    }
+
+    50% {
+        filter: brightness(93%);
+    }
+
+    100% {
+        filter: brightness(100%);
+    }
+}
+
+.verde {
+    transition: background-color 0.5s ease-in-out;
+    background: #2a9422;
+    background: radial-gradient(circle, #2a9422 0%, rgb(8, 78, 4) 80%);
+}
+
+.roxo {
+    transition: background-color 0.5s ease-in-out;
+    background: #ff06cb;
+    background: radial-gradient(circle, rgba(255, 6, 203, 1) 0%, rgba(147, 0, 139, 1) 83%);
+}
+
+.vermelho {
+    transition: background-color 0.5s ease-in-out;
+    background: #bb2e2e;
+    background: radial-gradient(circle, rgba(187, 46, 46, 1) 0%, rgba(117, 6, 6, 1) 80%);
+}
+
+.azul {
+    transition: background-color 0.5s ease-in-out;
+    background: #0e9aff;
+    background: radial-gradient(circle, rgba(14, 154, 255, 1) 0%, rgba(0, 73, 126, 1) 82%);
+}
+
+
+.NIKE {
+    position: absolute;
+    top: 15%;
+    font-size: 500px;
+    font-family: myFont10;
+    color: white;
+    letter-spacing: -25px;
+    cursor: default;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.35);
+}
+
+#nikeIcon3 {
+    filter: brightness(1000%);
+    position: absolute;
+    top: 10px;
+    left: 60px;
+    scale: 1.3;
+}
+
+#header2 {
+    background: none;
+    border: none;
+    filter: brightness(1000%);
+}
+
+#dropdown2 {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 35px;
+    width: 700px;
+    left: 50%;
+    margin-left: -250px;
+}
+
+.secaoDropdown{
+    padding-bottom: 10px;
+}
+
+.dropdown2 {
+    display: flex;
+    flex-direction: row;
+    margin: 0px 14px;
+    font-size: 18px;
+    position: relative;
+}
+
+#header2 div ul li a:hover {
+    border-bottom: 2.3px solid white;
+}
+
+.utilidadesCabecalho2 {
+    position: relative;
+    height: 100%;
+    width: 350px;
+}
+
+#favorito2 {
+    display: none;
+}
+
+#carrinho2 {
+    display: none;
+}
+
+.cor {
+    z-index: 1000;
+    font-size: 18px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 300px;
+    border: 2px solid black;
+    border-bottom: 10px solid #757575;
+    border: 20px;
+}
+
+#botaoCor {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    height: 60px;
+    width: 240px;
+    position: absolute;
+    top: 84vh;
+    left: 4vw;
+}
+
+input[type="radio"]:hover {
+    cursor: pointer;
+}
+
+#h2Cor {
+    position: absolute;
+    top: 80vh;
+    left: 4.8vw;
+    color: white;
+    font-size: 20px;
+}
+
+.tenisImg {
+    width: 32vw;
+    height: auto;
+    position: absolute;
+    top: 11%;
+    right: 33%;
+}
+
+.entradaTenisImg {
+    animation: entradaTenisImg 1s;
+}
+
+.saidaTenisImg {
+    animation: saidaTenisImg 1.5s;
+}
+
+@keyframes entradaTenisImg {
+    0% {
+        right: -500px;
+        filter: brightness(40%) blur(2px);
+    }
+
+    100% {
+        right: 33%;
+    }
+}
+
+@keyframes saidaTenisImg {
+    1% {
+        right: 33%;
+    }
+
+    100% {
+        right: 108%;
+        filter: brightness(40%) blur(3px);
+    }
+}
+
+
+.cor {
+    appearance: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-shadow: 2px 1px 5px 0px rgba(0, 0, 0, 0.35);
+}
+
+.cor:checked {
+    border: 2px solid white;
+    padding: 5px;
+}
+
+.cor1 {
+    background-color: #29ac20;
+}
+
+.cor2 {
+    background-color: #0888e4;
+}
+
+.cor3 {
+    background-color: #ff06cb;
+}
+
+.cor4 {
+    background-color: #bb1818;
+}
+
+.pc {
+    display: block;
+}
+
+.mob {
+    display: none;
+}
+
+
+@media (max-width: 500px) {
+    .pc {
+        display: none;
+    }
+
+    .NIKE {
+        font-size: 15rem;
+        letter-spacing: -5.1rem;
+        margin: 0;
+        padding: 0;
+        top: -3%;
+        height: 100%;
+    }
+
+    body {
+        overflow-y: visible;
+        overflow-x: visible;
+    }
+
+    .tenisImg {
+        width: 80%;
+    }
+
+    #botaoSubir {
+        right: 11%;
+    }
+
+    .semFundo,
+    #lupaItemPesquisa {
+        background: none;
+        background-color: transparent;
+    }
+
+    .pesquisaFundo {
+        top: 7px;
+        right: 21%;
+        z-index: 0;
+        width: 35px;
+    }
+
+    .utilidadesCabecalho {
+        width: 100%;
+    }
+
+    header {
+        border: 0;
+        height: 50px;
+    }
+
+    .logotipoNike {
+        position: absolute;
+        width: 60px;
+        height: auto;
+        left: 14px;
+        top: -5px;
+    }
+
+    #lupaItemPesquisa {
+        width: 33px;
+    }
+
+    #carrinho {
+        right: 5%;
+        top: 8px;
+        width: 34px;
+    }
+
+    #favorito {
+        right: 14%;
+        top: 9px;
+        width: 33px;
+    }
+
+    .mob {
+        display: block;
+    }
+
+    #imgNikeMob {
+        position: absolute;
+        left: -23px;
+        width: 106%;
+        height: calc(100vh - 96px);
+        object-fit: cover;
+        object-position: left;
+        margin-right: 1000px;
+    }
+
+    .pesquisaFundo:hover {
+        background-color: rgba(0, 0, 0, 0);
+    }
+
+    #botaoDescer {
+        scale: 3;
+        left: 10%;
+    }
+
+    .tenisImg {
+        width: 105%;
+        left: 50%;
+        margin-left: -55%;
+        top: 22%;
+    }
+
+    .textoVertical {
+        writing-mode: vertical-rl;
+        text-orientation: upright;
+    }
+
+    .entradaTenisImg {
+        animation: entradaTenisImg2 1s;
+    }
+
+    .saidaTenisImg {
+        animation: saidaTenisImg2 1.5s;
+    }
+
+    @keyframes entradaTenisImg2 {
+        0% {
+            right: -50px;
+            filter: brightness(40%) blur(2px);
+        }
+
+        100% {
+            right: 22%;
+        }
+    }
+
+    @keyframes saidaTenisImg2 {
+        1% {
+            right: 22%;
+        }
+
+        100% {
+            right: -50px;
+            filter: brightness(40%) blur(3px);
+        }
+    }
+
+    #botaoCor {
+        flex-direction: column;
+        height: 250px;
+        left: 50vw;
+        top: 120vw;
+    }
+
+    #h2Cor {
+        text-align: right;
+        left: 63vw;
+        width: 130px;
+        line-height: 20px;
+        top: 87vh;
+    }
+}
