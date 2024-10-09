@@ -37,14 +37,6 @@ function escondeBarraDePesquisa() {
 const botaoDescer = document.querySelector('#botaoDescer')
 const botaoSubir = document.querySelector('#botaoSubir')
 
-botaoDescer.addEventListener('click', () => {
-    window.scroll({ top: window.innerHeight, behavior: "smooth" })
-})
-
-botaoSubir.addEventListener('click', () => {
-    window.scroll({ top: 0, behavior: "smooth" })
-})
-
 // Código feito pelo Chat GPT que possui a finalidade de que quando a página for carregada ela volta ao topo suavemente.
 
 window.onload = function () {
@@ -189,3 +181,17 @@ function cor4() {
 })();
 
 // 
+
+window.addEventListener('wheel', function(event) {
+    if (event.deltaY > 0) {
+        window.scroll({ top: window.innerHeight+1, behavior: "smooth" })
+    } else {
+        window.scroll({ top: 0, behavior: "smooth" })
+    }
+});
+
+botaoDescer.addEventListener('click', () => {
+})
+
+botaoSubir.addEventListener('click', () => {
+})
